@@ -1,9 +1,4 @@
-""" question-20 """
-
-
-def func(x):
-    """check if string start with 'a'"""
-    return x[0] == "a"
+""" question-21 """
 
 
 def check_starts_from_a(input_list):
@@ -16,7 +11,7 @@ def check_starts_from_a(input_list):
         boolean array
     """
 
-    return list(map(func, input_list))
+    return list(filter(lambda x: x[0] == "a", input_list))
 
 
 INITIAL_ARRAY = ["apple", "banana", "pear", "apricot", "orange"]
