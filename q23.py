@@ -1,4 +1,4 @@
-""" question-22 """
+""" question-23 """
 
 
 def solve(input_list):

@@ -1,19 +1,28 @@
-""" question-22 """
+""" question-24 """
+import datetime
 
 
 def solve(input_list):
-    """This function return array of square of no. greater than 3
+    """This function return weekday of given date
 
     Parameters:
-        array of int
+        tuple of yyyy mm dd
 
     Returns:
-        array of int: square of no. greater than 3
+        string: weekday
     """
+    (year, month, date) = input_list
+    weekdays_mapping = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    datetime_instance1 = datetime.date(year, month, date)
+    return weekdays_mapping[datetime_instance1.weekday()]
 
-    return list(map(lambda x: x**2, filter(lambda x: x > 3, input_list)))
 
-
-INITIAL_ARRAY = [1, 2, 3, 4, 5]
-print(INITIAL_ARRAY)
-print("toatl sum: ", solve(INITIAL_ARRAY))
+print("today's date: ", solve((2023, 10, 6)))
